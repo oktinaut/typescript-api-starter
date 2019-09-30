@@ -1,0 +1,45 @@
+{
+  "name": "typescript-api-starter",
+  "version": "0.0.1",
+  "description": "Boilerplate for TypeScript API",
+  "main": "build/src/index.js",
+  "scripts": {
+    "gen:swagger": "mkdir -p \"generated/Swagger\" && tsoa swagger",
+    "gen:routes": "mkdir -p \"generated/Routes\" && tsoa routes",
+    "gen": "npm run gen:swagger && npm run gen:routes",
+    "build": "npm run gen && tsc",
+    "start": "npm run build && node build/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "api",
+    "openapi",
+    "inversify"
+  ],
+  "author": "Tim Okolowski",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/express": "^4.17.1",
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^12.7.8",
+    "@types/swagger-ui-express": "^3.0.1",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "inversify": "^5.0.1",
+    "inversify-binding-decorators": "^4.0.0",
+    "morgan": "^1.9.1",
+    "ora": "^4.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3",
+    "sqlite3": "^4.1.0",
+    "swagger-ui-express": "^4.1.1",
+    "tsoa": "^2.5.3",
+    "typeorm": "^0.2.19"
+  }
+}

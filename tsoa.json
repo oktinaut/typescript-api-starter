@@ -1,0 +1,20 @@
+{
+    "swagger": {
+        "specVersion": 3,
+        "outputDirectory": "./generated/Swagger",
+        "entryFile": "./src/index.ts",
+        "host": "localhost:3000",
+        "basePath": "/v1",
+        "schemes": ["http"]
+    },
+    "routes": {
+        "basePath": "/v1",
+        "entryFile": "./src/index.ts",
+        "routesDir": "./generated/Routes",
+        "middleware": "express",
+        "iocModule": "./src/iocContainer.ts",
+        "controllerPathGlobs": [
+            "./src/Features/**/Controllers/*"
+        ]
+    }
+}
